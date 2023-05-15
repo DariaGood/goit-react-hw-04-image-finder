@@ -18,12 +18,6 @@ export const App = () => {
   const [total, setTotal] = useState(0);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    if (query !== '' || page !== 1) {
-      fetchImages(query, page);
-    }
-  }, [query, page]);
-
   const fetchImages = useCallback(async (query, page) => {
     try {
       setIsLoading(true);
@@ -42,6 +36,12 @@ export const App = () => {
       setIsLoading(false);
     }
   }, []);
+
+  useEffect(() => {
+    if (query !== '' || page !== 1) {
+      fetchImages(query, page);
+    }
+  }, [query, page, fetchImages]);
 
   const handleSubmit = (query) => {
     setQuery(query);
@@ -66,6 +66,7 @@ export const App = () => {
   };
 
   const totalPage = total / images.length;
+
 
   return (
     <div

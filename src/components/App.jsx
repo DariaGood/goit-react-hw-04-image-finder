@@ -31,7 +31,7 @@ export const App = () => {
         setTotal(data.totalHits);
       }
     } catch (error) {
-      setError(error);
+      setError(error); // eslint-disable-next-line no-unused-vars
     } finally {
       setIsLoading(false);
     }

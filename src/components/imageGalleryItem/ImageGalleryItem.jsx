@@ -1,12 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './imageGalleryItem.module.css';
 
-export const ImageGalleryItem = ({
-  webformatURL,
-  tags,
-  largeImageURL,
-  onOpenModal,
-}) => {
+export const ImageGalleryItem = ({ webformatURL, tags, largeImageURL, onOpenModal }) => {
   return (
     <li className={styles.ImageGalleryItem}>
       <div onClick={() => onOpenModal(largeImageURL, tags)}>
@@ -22,3 +18,4 @@ ImageGalleryItem.propTypes = {
   largeImageURL: PropTypes.string.isRequired,
   onOpenModal: PropTypes.func.isRequired,
 };
+

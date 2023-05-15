@@ -1,5 +1,6 @@
-import { ImageGalleryItem } from '../imageGalleryItem/ImageGalleryItem';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { ImageGalleryItem } from '../imageGalleryItem/ImageGalleryItem';
 import styles from './imageGallery.module.css';
 
 export const ImageGallery = ({ gallery, onOpenModal }) => {
@@ -29,3 +30,4 @@ ImageGallery.propTypes = {
   ).isRequired,
   onOpenModal: PropTypes.func.isRequired,
 };
+

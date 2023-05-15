@@ -16,6 +16,7 @@ export const App = () => {
   const [largeImage, setLargeImage] = useState('');
   const [tags, setTags] = useState('');
   const [total, setTotal] = useState(0);
+  // eslint-disable-next-line
   const [error, setError] = useState(null);
 
   const fetchImages = useCallback(async (query, page) => {
@@ -31,7 +32,7 @@ export const App = () => {
         setTotal(data.totalHits);
       }
     } catch (error) {
-      setError(error); // eslint-disable-next-line no-unused-vars
+      setError(error); 
     } finally {
       setIsLoading(false);
     }
